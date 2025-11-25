@@ -18,12 +18,10 @@ public class Player {
 		int row,col;
 		
 		while(true) {
+
+			row = InputUtil.readInt(scanner, "行（0～2）を入力してください");
 			
-			System.out.println("行（0～2）を入力してください");
-			row = scanner.nextInt();
-			
-			System.out.println("列（0～2）を入力してください");
-			col = scanner.nextInt();
+			col = InputUtil.readInt(scanner, "列（0～2）を入力してください");
 			
 			if(row < 0 || row > 2 || col < 0 || col > 2) {
 				System.out.println("再度入力してください");
@@ -39,6 +37,19 @@ public class Player {
 			}
 		}
 		
+	}
+	
+	public int readInt(Scanner scanner) {
+		while(true) {
+			
+			String line = scanner.nextLine();
+			
+			try {
+				return Integer.parseInt(line);
+			} catch (NumberFormatException e) {
+				System.out.println("数字を入力してください");
+			}
+		}
 	}
 	
 
