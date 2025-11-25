@@ -20,6 +20,7 @@ public class ReplayManager {
 			System.out.println("もう一度遊びますか？(y/n):");
 			
 			input = scanner.nextLine().trim().toLowerCase();
+
 			
 			if(input.equals("y")) {
 				playAgain = true;

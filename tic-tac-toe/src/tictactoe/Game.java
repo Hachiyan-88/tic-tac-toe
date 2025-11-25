@@ -19,8 +19,8 @@ public class Game {
 			
 			int cpuLevel = 0;
 			while(cpuLevel != 1 && cpuLevel != 2) {
-				System.out.println("CPUの強さを選択してください(1.弱い)(2.強い)");
-				cpuLevel = scanner.nextInt();
+				
+				cpuLevel = InputUtil.readInt(scanner, "CPUの強さを選択してください(1弱い)(2強い)");
 				
 				if(cpuLevel != 1 && cpuLevel != 2) {
 					System.out.println("無効な選択肢です。再度入力してください");
